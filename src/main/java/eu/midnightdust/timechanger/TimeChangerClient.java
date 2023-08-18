@@ -8,7 +8,7 @@ import net.minecraft.client.MinecraftClient;
 
 public class TimeChangerClient implements ClientModInitializer {
     private static final MinecraftClient client = MinecraftClient.getInstance();
-    public static long customTime = -1;
+    public static int customTime = -1;
     public static Weather customWeather = Weather.UNSET;
 
     @Override

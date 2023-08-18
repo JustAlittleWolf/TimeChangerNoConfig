@@ -17,7 +17,7 @@ public abstract class MixinClientWorldProperties {
     @Environment(EnvType.CLIENT)
     public void getTimeOfDay(CallbackInfoReturnable<Long> cir) {
         if (TimeChangerClient.isEnabledOnWorld() && TimeChangerClient.customTime >= 0) {
-            cir.setReturnValue(TimeChangerClient.customTime);
+            cir.setReturnValue((long) TimeChangerClient.customTime);
         }
         else cir.cancel();
     }
