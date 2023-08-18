@@ -1,7 +1,6 @@
 package eu.midnightdust.timechanger.mixin;
 
 import eu.midnightdust.timechanger.TimeChangerClient;
-import eu.midnightdust.timechanger.config.TimeChangerConfig;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.client.world.ClientWorld;
@@ -17,8 +16,8 @@ public abstract class MixinClientWorldProperties {
     @Inject(at = @At("RETURN"), method = "getTimeOfDay", cancellable = true)
     @Environment(EnvType.CLIENT)
     public void getTimeOfDay(CallbackInfoReturnable<Long> cir) {
-        if (TimeChangerClient.isEnabledOnWorld() && TimeChangerConfig.custom_time >= 0) {
-            cir.setReturnValue((long) TimeChangerConfig.custom_time);
+        if (TimeChangerClient.isEnabledOnWorld() && TimeChangerClient.customTime >= 0) {
+            cir.setReturnValue(TimeChangerClient.customTime);
         }
         else cir.cancel();
     }

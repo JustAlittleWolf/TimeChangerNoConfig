@@ -2,7 +2,6 @@ package eu.midnightdust.timechanger.command;
 
 import com.mojang.brigadier.arguments.IntegerArgumentType;
 import com.mojang.brigadier.builder.LiteralArgumentBuilder;
-import eu.midnightdust.timechanger.config.TimeChangerConfig;
 import net.fabricmc.fabric.api.client.command.v2.ClientCommandManager;
 import net.fabricmc.fabric.api.client.command.v2.FabricClientCommandSource;
 import net.minecraft.text.Text;
@@ -19,9 +18,6 @@ public class CTimeCommand {
     }
 
     private static int setTime(FabricClientCommandSource source, int time) {
-        TimeChangerConfig.custom_time = time;
-        TimeChangerConfig.write("timechanger");
-
         source.sendFeedback(Text.translatable("command.timechanger.ctime.success").append(time >= 0 ? String.valueOf(time) : "disabled"));
         return 1;
     }
