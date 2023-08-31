@@ -27,9 +27,5 @@
 
   "mixins": [
     "timechanger.mixins.json"
-  ],
-
-  "depends": {
-    "midnightlib": "*"
-  }
+  ]
 }
