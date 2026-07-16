@@ -8,7 +8,6 @@ import net.fabricmc.fabric.api.client.command.v2.FabricClientCommandSource;
 import net.minecraft.network.chat.Component;
 
 public class CTimeCommand {
-
     public static LiteralArgumentBuilder<FabricClientCommandSource> command() {
         return ClientCommands.literal("ctime").then(
             ClientCommands.argument("time", IntegerArgumentType.integer(-1))
@@ -21,5 +20,4 @@ public class CTimeCommand {
         source.sendFeedback(Component.translatable("command.timechanger.ctime.success").append(time >= 0 ? String.valueOf(time) : "disabled"));
         return 1;
     }
-
 }

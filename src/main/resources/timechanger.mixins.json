@@ -3,8 +3,8 @@
   "package": "eu.midnightdust.timechanger.mixin",
   "compatibilityLevel": "JAVA_25",
   "client": [
-    "MixinClientWorld",
-    "MixinClientWorldProperties"
+    "LevelMixin",
+    "ClientLevelDataMixin"
   ],
   "injectors": {
     "defaultRequire": 1

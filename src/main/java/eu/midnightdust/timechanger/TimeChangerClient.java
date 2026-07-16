@@ -11,13 +11,13 @@ public class TimeChangerClient implements ClientModInitializer {
     public static int customTime = -1;
     public static Weather customWeather = Weather.UNSET;
 
+    public static boolean isEnabledOnWorld() {
+        return client.getCurrentServer() != null;
+    }
+
     @Override
     public void onInitializeClient() {
         ClientCommandRegistrationCallback.EVENT.register((dispatcher, _) -> dispatcher.register(CTimeCommand.command()));
         ClientCommandRegistrationCallback.EVENT.register((dispatcher, _) -> dispatcher.register(CWeatherCommand.command()));
-    }
-
-    public static boolean isEnabledOnWorld() {
-        return client.getCurrentServer() != null;
     }
 }

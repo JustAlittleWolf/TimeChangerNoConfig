@@ -8,7 +8,6 @@ import net.fabricmc.fabric.api.client.command.v2.FabricClientCommandSource;
 import net.minecraft.network.chat.Component;
 
 public class CWeatherCommand {
-
     public static LiteralArgumentBuilder<FabricClientCommandSource> command() {
         return ClientCommands.literal("cweather")
             .then(ClientCommands.literal("unset").executes(ctx -> setWeather(ctx.getSource(), Weather.UNSET)))
