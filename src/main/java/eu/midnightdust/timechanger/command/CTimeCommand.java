@@ -17,6 +17,7 @@ public class CTimeCommand {
 
     private static int setTime(FabricClientCommandSource source, int time) {
         TimeChangerClient.customTime = time;
+        source.getLevel().environmentAttributes().invalidateTickCache();
         source.sendFeedback(Component.translatable("command.timechanger.ctime.success").append(time >= 0 ? String.valueOf(time) : "disabled"));
         return 1;
     }
