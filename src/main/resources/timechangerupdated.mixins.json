@@ -3,7 +3,7 @@
   "package": "me.wolfii.timechangerupdated.mixin",
   "compatibilityLevel": "JAVA_25",
   "client": [
-    "ClientClockManagerMixin",
+    "ClientClockInstanceMixin",
     "ClientLevelDataMixin",
     "LevelMixin"
   ],

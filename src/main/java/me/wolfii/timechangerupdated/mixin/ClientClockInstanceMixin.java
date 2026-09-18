@@ -8,13 +8,13 @@ import net.minecraft.core.Holder;
 import net.minecraft.world.clock.WorldClock;
 import org.spongepowered.asm.mixin.Mixin;
 
-@Mixin(ClientClockManager.class)
-public class ClientClockManagerMixin {
-    @WrapMethod(method = "getTotalTicks")
-    private long getTotalTicks(Holder<WorldClock> definition, Operation<Long> original) {
+@Mixin(ClientClockManager.ClientClockInstance.class)
+public class ClientClockInstanceMixin {
+    @WrapMethod(method = "totalTicks")
+    private long getTotalTicks(Operation<Long> original) {
         if (TimeChangerClient.isEnabledOnWorld() && TimeChangerClient.customTime >= 0) {
             return TimeChangerClient.customTime;
         }
-        return original.call(definition);
+        return original.call();
     }
 }
