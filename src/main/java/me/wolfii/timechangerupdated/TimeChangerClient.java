@@ -1,7 +1,7 @@
-package eu.midnightdust.timechanger;
+package me.wolfii.timechangerupdated;
 
-import eu.midnightdust.timechanger.command.CTimeCommand;
-import eu.midnightdust.timechanger.command.CWeatherCommand;
+import me.wolfii.timechangerupdated.command.CTimeCommand;
+import me.wolfii.timechangerupdated.command.CWeatherCommand;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.command.v2.ClientCommandRegistrationCallback;
 import net.minecraft.client.Minecraft;

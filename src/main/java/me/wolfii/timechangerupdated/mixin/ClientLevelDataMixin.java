@@ -1,8 +1,8 @@
-package eu.midnightdust.timechanger.mixin;
+package me.wolfii.timechangerupdated.mixin;
 
 import com.llamalad7.mixinextras.injector.wrapmethod.WrapMethod;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
-import eu.midnightdust.timechanger.TimeChangerClient;
+import me.wolfii.timechangerupdated.TimeChangerClient;
 import net.minecraft.client.multiplayer.ClientLevel;
 import org.spongepowered.asm.mixin.Mixin;
 

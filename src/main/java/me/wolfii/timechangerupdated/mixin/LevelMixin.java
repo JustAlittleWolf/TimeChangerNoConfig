@@ -1,9 +1,9 @@
-package eu.midnightdust.timechanger.mixin;
+package me.wolfii.timechangerupdated.mixin;
 
 import com.llamalad7.mixinextras.injector.wrapmethod.WrapMethod;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
-import eu.midnightdust.timechanger.TimeChangerClient;
-import eu.midnightdust.timechanger.Weather;
+import me.wolfii.timechangerupdated.TimeChangerClient;
+import me.wolfii.timechangerupdated.Weather;
 import net.minecraft.world.level.Level;
 import org.spongepowered.asm.mixin.Mixin;
 
