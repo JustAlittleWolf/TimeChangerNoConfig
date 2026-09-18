@@ -1,21 +1,18 @@
 {
   "schemaVersion": 1,
-  "id": "timechanger",
+  "id": "timechangerupdated",
   "version": "${version}",
 
-  "name": "Time Changer",
+  "name": "Time Changer Updated",
   "description": "Allows you to change the time completely clientside!",
   "authors": [
+    "JustAlittleWolf",
     "Motschen",
     "TeamMidnightDust"
   ],
-  "contributors": [
-    "JustAlittleWolf"
-  ],
   "contact": {
-    "homepage": "https://www.midnightdust.eu/",
-    "sources": "https://github.com/TeamMidnightDust/TimeChanger",
-    "issues": "https://github.com/TeamMidnightDust/TimeChanger/issues"
+    "sources": "https://github.com/JustAlittleWolf/TimeChangerNoConfig/",
+    "issues": "https://github.com/JustAlittleWolf/TimeChangerNoConfig/issues"
   },
 
   "license": "MIT",
